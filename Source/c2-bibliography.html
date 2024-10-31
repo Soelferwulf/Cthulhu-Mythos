@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H. P. Lovecraft - Bibliography</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="lovecraft">
+    <noscript>
+        <h1 style="color: red" ;>JavaScript is deactivated!</h1>
+    </noscript>
+
+    <nav class="navbar navbar-expand-sm justify-content-between fixed-top" id="uncollapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Little Cthulhu" style="width:2rem;"></a>
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+                <a href="./b1-the_world.html" class="nav-link dropdown-toggle" id="mythos-main"
+                    onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                <div class="dropdown-menu">
+                    <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                    <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board Games</a>
+                    <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                        Games</a>
+                    <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call of
+                        Cthulhu RPG</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="./c1-lovecraft.html" class="nav-link dropdown-toggle" id="lovecraft-main"
+                    onclick="fxSanityCounter()">H. P.
+                    LOVECRAFT</a>
+                <div class="dropdown-menu">
+                    <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                    <a href="./c2-bibliography.html" class="dropdown-item" onclick="fxSanityCounter()">Bibliography</a>
+                    <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                    <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                        Lovecraft<br>Historical Society</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="./d-contact.html" class="nav-link" id="contact" onclick="fxSanityCounter()">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-md justify-content-between fixed-top" id="collapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Funny Cthulhu" style="width:2rem;"></a>
+        <!-- hamburger menu -->
+        <button class="navbar-toggler" id="burger-button" type="button" data-toggle="collapse" data-target="#burger">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="burger">
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item collapsed-dropdown">
+                    <a class="nav-link dropdown-toggle" id="mythos-main-collapse" data-toggle="dropdown"
+                        onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                    <div class="dropdown-menu">
+                        <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                        <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board
+                            Games</a>
+                        <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                            Games</a>
+                        <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call
+                            of
+                            Cthulhu RPG</a>
+                    </div>
+                </li>
+                <li class="nav-item collapsed-dropdown">
+                    <a class="nav-link dropdown-toggle" id="lovecraft-main-collapse" data-toggle="dropdown"
+                        onclick="fxSanityCounter()">H. P. LOVECRAFT</a>
+                    <div class="dropdown-menu">
+                        <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                        <a href="./c2-bibliography.html" class="dropdown-item"
+                            onclick="fxSanityCounter()">Bibliography</a>
+                        <a href="./c3-reader.html" class="dropdown-item"
+                            onclick="fxSanityCounter()">Fulltext reader</a>
+                        <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                            Lovecraft<br>Historical Society</a>
+                    </div>
+                </li>
+                <li class="nav-item collapsed-dropdown">
+                    <a href="./d-contact.html" class="nav-link" id="contact-collapse"
+                        onclick="fxSanityCounter()">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <table id="bibliography"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3 class="container-title">H. P. Lovecraft - Bibliography</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 id="titleOutput" class="card-title">Click a title to see the plot.</h5><button class="biblio-fulltext-link"><a href="./c3-reader.html">Read fulltext</a></button>
+                        <div id="textOutput">
+                        </div>
+                        <div id="source-link" class="source">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // arrays to store the plot descriptions, titles, wiki links
+        var titles = [];
+        var text = [];
+        var links = [];
+        // loading xml data
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    bibliography(this);
+                }
+            };
+            xmlhttp.open("GET", "./bibliography.xml", true);
+            xmlhttp.send();
+        }
+        // creating the table and filling it with data
+        function bibliography(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>#</th><th>Title</th><th>Written</th><th class=\"th-form\">Form</th></tr>";
+            var textStorage;
+            var titlesStorage;
+            var wikiStorage;
+            var x = xmlDoc.getElementsByTagName("book");
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" + (i + 1) + "</td><td><button class=\"bibliography-button biblio-fulltext-link\" onclick=\"showText(" + i + ")\">" +
+                    x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("written")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("form")[0].childNodes[0].nodeValue +
+                    "</td></tr>";
+                textStorage = x[i].getElementsByTagName("text")[0].childNodes[0].nodeValue;
+                text.push(textStorage);
+                titlesStorage = x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+                titles.push(titlesStorage);
+                linksStorage = "<a href=\"" + x[i].getElementsByTagName("wiki")[0].childNodes[0].nodeValue +
+                    "\" target=\"blank\"><i>Read more on Wiki</i></a>";
+                links.push(linksStorage);
+            }
+            document.getElementById("bibliography").innerHTML = table;
+        }
+        // showing the plot description in "textOutput" div
+        // all text formating comes straight from XML file, escaping <p>, <pre> and <blockquote> tags
+        //  -when pasting text, XML splits it into lines according to paragraphs - very helpful, but html can't understand it without tags
+        function showText(num) {
+            document.getElementById("textOutput").innerHTML = text[num];
+            document.getElementById("titleOutput").innerHTML = titles[num];
+            document.getElementById("source-link").innerHTML = links[num];
+            // cookie for the reader
+            document.cookie = "num=" + num + "; path=./c3-reader.html";
+        }
+        loadXMLDoc();
+    </script>
+    <div class="progress fixed-bottom">
+        <div class="progress-bar" style="width:0%"></div>
+    </div>
+</body>
+
+</html>

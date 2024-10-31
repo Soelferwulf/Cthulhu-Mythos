@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cthulhu Mythos - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</head>
+
+<body class="home">
+    <noscript>
+        <h1 style="color: red" ;>JavaScript is deactivated!</h1>
+    </noscript>
+
+    <nav class="navbar navbar-expand-sm justify-content-between fixed-top" id="uncollapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Little Cthulhu" style="width:2rem;"></a>
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+                <a href="./b1-the_world.html" class="nav-link dropdown-toggle" id="mythos-main"
+                    onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                <div class="dropdown-menu">
+                    <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                    <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board Games</a>
+                    <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                        Games</a>
+                    <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call of
+                        Cthulhu RPG</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="./c1-lovecraft.html" class="nav-link dropdown-toggle" id="lovecraft-main"
+                    onclick="fxSanityCounter()">H. P.
+                    LOVECRAFT</a>
+                <div class="dropdown-menu">
+                    <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                    <a href="./c2-bibliography.html" class="dropdown-item" onclick="fxSanityCounter()">Bibliography</a>
+                    <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                    <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                        Lovecraft<br>Historical Society</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="./d-contact.html" class="nav-link" id="contact" onclick="fxSanityCounter()">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-md justify-content-between fixed-top" id="collapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Funny Cthulhu" style="width:2rem;"></a>
+            <!-- hamburger menu -->
+                <button class="navbar-toggler" id="burger-button" type="button" data-toggle="collapse" data-target="#burger">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="burger">
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" id="mythos-main-collapse" data-toggle="dropdown" onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                <div class="dropdown-menu">
+                    <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                    <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board Games</a>
+                    <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                        Games</a>
+                    <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call of
+                        Cthulhu RPG</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" id="lovecraft-main-collapse" data-toggle="dropdown" onclick="fxSanityCounter()">H. P. LOVECRAFT</a>
+                <div class="dropdown-menu">
+                    <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                    <a href="./c2-bibliography.html" class="dropdown-item" onclick="fxSanityCounter()">Bibliography</a>
+                    <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                    <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                        Lovecraft<br>Historical Society</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="./d-contact.html" class="nav-link" id="contact-collapse" onclick="fxSanityCounter()">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+
+
+    <svg id="home-graphic" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 1920 1280">
+        <image width="1920" height="1280" xlink:href="../Images/Cthulhu in temple-smaller.jpg"></image>
+        <a id="cthulhu-hover" xlink:href="./b1-the_world.html">
+            <polygon points="1098.00,135.00 981.00,169.50 981.00,169.50
+            981.00,169.50 922.50,243.00 922.50,243.00
+            922.50,243.00 897.00,309.00 897.00,309.00
+            897.00,309.00 912.00,385.50 912.00,385.50
+            912.00,385.50 939.00,454.50 939.00,454.50
+            939.00,454.50 936.00,496.50 936.00,496.50
+            936.00,496.50 829.50,639.00 829.50,639.00
+            829.50,639.00 816.00,715.50 816.00,715.50
+            816.00,715.50 844.50,790.50 844.50,790.50
+            844.50,790.50 865.50,828.00 865.50,828.00
+            865.50,828.00 819.00,870.00 819.00,870.00
+            819.00,870.00 768.00,886.50 768.00,886.50
+            768.00,886.50 766.50,915.00 766.50,915.00
+            766.50,915.00 735.00,952.50 735.00,952.50
+            735.00,952.50 727.50,1023.00 727.50,1023.00
+            727.50,1023.00 685.50,1074.00 685.50,1074.00
+            685.50,1074.00 679.50,1135.50 679.50,1135.50
+            679.50,1135.50 678.00,1167.00 678.00,1167.00
+            678.00,1167.00 738.00,1173.00 738.00,1173.00
+            738.00,1173.00 837.00,1135.50 837.00,1135.50
+            837.00,1135.50 852.00,1180.50 852.00,1180.50
+            852.00,1180.50 955.50,1210.50 955.50,1210.50
+            955.50,1210.50 1017.00,1180.50 1017.00,1180.50
+            1017.00,1180.50 1123.50,1146.00 1123.50,1146.00
+            1123.50,1146.00 1282.50,1158.00 1282.50,1158.00
+            1282.50,1158.00 1281.00,1039.50 1281.00,1039.50
+            1281.00,1039.50 1350.00,943.50 1350.00,943.50
+            1350.00,943.50 1321.50,342.00 1321.50,342.00
+            1321.50,342.00 1291.50,261.00 1291.50,261.00
+            1291.50,261.00 1189.50,160.50 1189.50,160.50
+            1189.50,160.50 1098.00,135.00 1098.00,135.00"></polygon>
+        </a>
+        <a id="lovecraft-hover" xlink:href="./c1-lovecraft.html">
+            <polygon points="402.00,362.00 376.00,397.00 376.00,397.00
+            376.00,397.00 372.00,410.00 372.00,410.00
+            372.00,410.00 338.00,461.00 338.00,461.00
+            338.00,461.00 328.00,472.00 328.00,472.00
+            328.00,472.00 321.00,493.00 321.00,493.00
+            321.00,493.00 305.00,521.00 305.00,521.00
+            305.00,521.00 286.00,567.00 286.00,567.00
+            286.00,567.00 265.00,638.00 265.00,638.00
+            265.00,638.00 254.00,661.00 254.00,661.00
+            254.00,661.00 254.00,688.00 254.00,688.00
+            254.00,688.00 269.00,714.00 269.00,714.00
+            269.00,714.00 237.00,931.00 237.00,931.00
+            237.00,931.00 234.00,959.00 234.00,959.00
+            234.00,959.00 219.00,980.00 219.00,980.00
+            219.00,980.00 234.00,1010.00 234.00,1010.00
+            234.00,1010.00 236.00,1043.00 236.00,1043.00
+            236.00,1043.00 249.00,1050.00 249.00,1050.00
+            249.00,1050.00 258.00,1101.00 258.00,1101.00
+            258.00,1101.00 365.00,1107.00 365.00,1107.00
+            365.00,1107.00 438.00,1102.00 438.00,1102.00
+            438.00,1102.00 485.00,1087.00 485.00,1087.00
+            485.00,1087.00 563.00,1081.00 563.00,1081.00
+            563.00,1081.00 592.00,553.00 592.00,553.00
+            592.00,553.00 595.00,500.00 595.00,500.00
+            595.00,500.00 584.00,440.00 584.00,440.00
+            584.00,440.00 562.00,396.00 562.00,396.00
+            562.00,396.00 508.00,357.00 508.00,357.00
+            508.00,357.00 475.00,347.00 475.00,347.00
+            475.00,347.00 437.00,351.00 437.00,351.00
+            437.00,351.00 414.00,358.00 414.00,358.00"></polygon>
+        </a>
+        <polygon class="eyes" points="944.15,399.26 941.24,396.57 941.24,396.57
+        941.24,396.57 938.55,395.23 938.55,395.23
+        938.55,395.23 934.97,394.55 934.97,394.55
+        934.97,394.55 931.83,395.00 931.83,395.00
+        931.83,395.00 930.26,397.02 930.26,397.02
+        930.26,397.02 930.04,399.04 930.04,399.04
+        930.04,399.04 931.61,400.60 931.61,400.60
+        931.61,400.60 933.40,402.40 933.40,402.40
+        933.40,402.40 935.86,402.84 935.86,402.84
+        935.86,402.84 939.00,402.62 939.00,402.62
+        939.00,402.62 941.69,402.40 941.69,402.40
+        941.69,402.40 943.26,401.50 943.26,401.50"></polygon>
+        <polygon class="eyes" points="1006.66,371.48 1014.28,369.01 1014.28,369.01
+        1014.28,369.01 1018.76,367.22 1018.76,367.22
+        1018.76,367.22 1021.45,365.20 1021.45,365.20
+        1021.45,365.20 1022.35,362.52 1022.35,362.52
+        1022.35,362.52 1022.12,359.60 1022.12,359.60
+        1022.12,359.60 1020.33,357.81 1020.33,357.81
+        1020.33,357.81 1017.19,358.03 1017.19,358.03
+        1017.19,358.03 1014.06,359.60 1014.06,359.60
+        1014.06,359.60 1011.82,361.84 1011.82,361.84
+        1011.82,361.84 1009.13,363.41 1009.13,363.41
+        1009.13,363.41 1006.66,365.65 1006.66,365.65
+        1006.66,365.65 1004.20,368.12 1004.20,368.12
+        1004.20,368.12 1002.41,371.03 1002.41,371.03
+        1002.41,371.03 1003.08,372.60 1003.08,372.60
+        1003.08,372.60 1004.42,372.60 1004.42,372.60"></polygon>
+        <text id="home-header" x="3rem" y="10rem">Roam these halls at your own perril...</text>
+        <text id="home-mythos-text" x="12rem" y="18rem">Explore the World of The Chtulhu Mythos!</text>
+        <text id="home-lovecraft-text" x="12rem" y="18rem">Learn about The Father of Horror!</text>
+        <!-- <text id="home-contact-text" x="12rem" y="18rem">Contact us... if you dare.</text> -->
+        <text id="home-contact-text" x="12rem" y="18rem">Contact us... if you dare.</text>
+    </svg>
+
+
+    <div class="progress fixed-bottom">
+        <div class="progress-bar" style="width:20%"></div>
+    </div>
+</body>
+
+</html>
