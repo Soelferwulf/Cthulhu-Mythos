@@ -1,5 +1,6 @@
 # This is a website about Cthulhu Mythos 
 #       and H. P. Lovecraft
+________
 
 It was created as a semester project for my WebDesign course at BBRZ (BITEC)
 
