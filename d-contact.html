@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cthulhu Mythos - Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+
+<body class="contact">
+    <noscript>
+        <h1 style="color: red" ;>JavaScript is deactivated!</h1>
+    </noscript>
+
+    <nav class="navbar navbar-expand-sm justify-content-between fixed-top" id="uncollapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Little Cthulhu" style="width:2rem;"></a>
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+                <a href="./b1-the_world.html" class="nav-link dropdown-toggle" id="mythos-main"
+                    onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                <div class="dropdown-menu">
+                    <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                    <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board Games</a>
+                    <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                        Games</a>
+                    <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call of
+                        Cthulhu RPG</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="./c1-lovecraft.html" class="nav-link dropdown-toggle" id="lovecraft-main"
+                    onclick="fxSanityCounter()">H. P.
+                    LOVECRAFT</a>
+                <div class="dropdown-menu">
+                    <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                    <a href="./c2-bibliography.html" class="dropdown-item" onclick="fxSanityCounter()">Bibliography</a>
+                    <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                    <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                        Lovecraft<br>Historical Society</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="./d-contact.html" class="nav-link" id="contact" onclick="fxSanityCounter()">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-md justify-content-between fixed-top" id="collapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Funny Cthulhu" style="width:2rem;"></a>
+        <!-- hamburger menu -->
+        <button class="navbar-toggler" id="burger-button" type="button" data-toggle="collapse" data-target="#burger">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="burger">
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" id="mythos-main-collapse" data-toggle="dropdown"
+                        onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                    <div class="dropdown-menu">
+                        <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                        <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board
+                            Games</a>
+                        <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                            Games</a>
+                        <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call
+                            of
+                            Cthulhu RPG</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" id="lovecraft-main-collapse" data-toggle="dropdown"
+                        onclick="fxSanityCounter()">H. P. LOVECRAFT</a>
+                    <div class="dropdown-menu">
+                        <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                        <a href="./c2-bibliography.html" class="dropdown-item"
+                            onclick="fxSanityCounter()">Bibliography</a>
+                        <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                        <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                            Lovecraft<br>Historical Society</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="./d-contact.html" class="nav-link" id="contact-collapse"
+                        onclick="fxSanityCounter()">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container container-contact">
+        <div class="container-title contact-title">Contact</div>
+        <h6 class="rpg-title contact-subtitle">Jiri Fleger</h6>
+        <h6 class="rpg-title contact-subtitle no-wrap-text"><i class="fa fa-phone"></i><a href="tel:+4369010262632"
+                class="card-link subtitle-link indent">+4369010262632</a></h6>
+        <h6 class="rpg-title contact-subtitle no-wrap-text"><i class="fa fa-phone"></i><a href="tel:+420728511214"
+                class="card-link subtitle-link indent">+420728511214</a></h6>
+        <h6 class="rpg-title contact-subtitle no-wrap-text"><i class="fa fa-at"></i><a
+                href="mailto:soelferwulf@gmail.com" class="card-link subtitle-link indent">soelferwulf@gmail.com</a>
+        </h6>
+        <h6 class="rpg-title contact-subtitle no-wrap-text"><i class="fa fa-globe"></i><a
+                href="https://jiri-fleger.w3spaces.com/" class="card-link subtitle-link indent"
+                target="_blank">jiri-fleger.w3spaces.com</a></h6><br>
+        <h6 class="rpg-title contact-subtitle no-wrap-text"><span class="indent">Any Questions? Wanna
+                grab a beer?</span></h6>
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary contact-button" data-toggle="modal" data-target="#modal-form"
+            data-backdrop="false" data-keyboard="true">
+            Send me a Message
+        </button>
+    </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="modal-form">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <!-- <div class="modal-header"></div>
+                    <h4 class="modal-title">Not with her though!</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div> -->
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="card-title modal-title">Not with her you won't! With ME! You didn't think...? <span
+                            class="no-wrap-text">Oh please...</span></div>
+                    <form action="">
+                        <!-- form with HTML5 validation - required fields and so on -->
+                        <!-- real email validation in JavaScript - function send() -->
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" value="" placeholder="Your Name" id="name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" value="" placeholder="Your Email" id="email">
+                        </div>
+                        <div class="form-group form-check">
+                            <input class="form-check-input" value="" type="checkbox" id="check" required="required">
+                            <label class="form-check-label form-label" id="check-label"> You understand, that I might
+                                actually read this.</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your message:</label>
+                            <textarea class="form-control" placeholder="Your message" rows="6" id="message"></textarea>
+                        </div>
+                        <!-- buttons - send, close form and open admin section -->
+                        <!-- admin should open with password or even be visible only with login...no time, tut mir leid :´(  -->
+                        <button type="submit" value="Send" onclick="send()" class="btn btn-submit">Send</button>
+                        <button type="button" class="btn btn-close" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-close" onclick="showAdmin()">Admin</button>
+                        <hr>
+                        <div id="admin-section">
+                            <label for="email" class="form-label form-label-admin"><input
+                                    class="contact-choose-file-button" id="load" type="file" value="load"
+                                    onchange="loadfile()"></label>
+                            <textarea class="form-control" id="textarea" name="" rows="10"></textarea>
+                            <button type="button" class="btn btn-close btn-reply" id="reply"><a href="">Reply</a></button>
+                        </div>
+
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="progress fixed-bottom">
+        <div class="progress-bar" style="width:0%"></div>
+    </div>
+</body>
+
+<script>
+    var emailTemp = "";
+    // save via blob
+    // https://www.youtube.com/watch?v=YYnQjxKYx4k
+    function send() {
+        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+        if (email.match(emailRegex) && check.checked == 1){
+        var data = [];
+        data.push(name);
+        data.push(email);
+        data.push(message);
+
+        // making string out of the list
+        var data_string = JSON.stringify(data);
+
+        // creating blob and putting information into it
+        var file = new Blob([data_string], { type: "text" });
+        var anchor = document.createElement("a");
+        // file is the last part of the url adress
+        anchor.href = URL.createObjectURL(file);
+        anchor.download = "message.txt";
+        // anchor working on click
+        anchor.click();
+        
+        } else {
+            alert("Oops, something went wrong... Please check, if your email adress has a valid format and don't forget to check the obligatory agreement, as always!");
+        }
+    }
+
+    // loading the string from the file
+    function loadfile() {
+        var file = document.getElementById("load").files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            // var textbox = document.getElementById(textarea).value;
+            var loadName = JSON.parse(reader.result)[0];
+            var loadEmail = JSON.parse(reader.result)[1];
+            var loadMessage = JSON.parse(reader.result)[2];
+            document.getElementById("textarea").value = `Name:   ${loadName}\nEmail:    ${loadEmail}\nMessage:\n   ${loadMessage}`;
+            document.getElementById("reply").innerHTML = `<a href="mailto:${loadEmail}">Reply</a>`;
+        };
+
+        reader.readAsText(file);
+    }
+
+    function showAdmin() {
+        document.getElementById("admin-section").style.display = "block";
+    }
+
+</script>
+
+</html>

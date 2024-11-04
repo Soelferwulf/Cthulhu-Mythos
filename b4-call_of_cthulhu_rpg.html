@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cthulhu Mythos - Call of Cthulhu RPG</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="mythos rpg">
+    <noscript>
+        <h1 style="color: red" ;>JavaScript is deactivated!</h1>
+    </noscript>
+
+    <nav class="navbar navbar-expand-sm justify-content-between fixed-top" id="uncollapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Little Cthulhu" style="width:2rem;"></a>
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+                <a href="./b1-the_world.html" class="nav-link dropdown-toggle" id="mythos-main"
+                    onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                <div class="dropdown-menu">
+                    <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                    <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board Games</a>
+                    <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                        Games</a>
+                    <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call of
+                        Cthulhu RPG</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="./c1-lovecraft.html" class="nav-link dropdown-toggle" id="lovecraft-main"
+                    onclick="fxSanityCounter()">H. P.
+                    LOVECRAFT</a>
+                <div class="dropdown-menu">
+                    <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                    <a href="./c2-bibliography.html" class="dropdown-item" onclick="fxSanityCounter()">Bibliography</a>
+                    <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                    <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                        Lovecraft<br>Historical Society</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="./d-contact.html" class="nav-link" id="contact" onclick="fxSanityCounter()">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-md justify-content-between fixed-top" id="collapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Funny Cthulhu" style="width:2rem;"></a>
+        <!-- hamburger menu -->
+        <button class="navbar-toggler" id="burger-button" type="button" data-toggle="collapse" data-target="#burger">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="burger">
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item collapsed-dropdown">
+                    <a class="nav-link dropdown-toggle" id="mythos-main-collapse" data-toggle="dropdown"
+                        onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                    <div class="dropdown-menu">
+                        <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                        <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board
+                            Games</a>
+                        <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                            Games</a>
+                        <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call
+                            of
+                            Cthulhu RPG</a>
+                    </div>
+                </li>
+                <li class="nav-item collapsed-dropdown">
+                    <a class="nav-link dropdown-toggle" id="lovecraft-main-collapse" data-toggle="dropdown"
+                        onclick="fxSanityCounter()">H. P. LOVECRAFT</a>
+                    <div class="dropdown-menu">
+                        <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                        <a href="./c2-bibliography.html" class="dropdown-item"
+                            onclick="fxSanityCounter()">Bibliography</a>
+                        <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                        <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                            Lovecraft<br>Historical Society</a>
+                    </div>
+                </li>
+                <li class="nav-item collapsed-dropdown">
+                    <a href="./d-contact.html" class="nav-link" id="contact-collapse"
+                        onclick="fxSanityCounter()">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- container beginning -->
+    <div class="container container-rpg">
+        <!-- stable header -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="container-title rpg-title">Call of Cthulhu RPG</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <!-- card with switching panes -->
+                <div class="card card-rpg">
+                    <!-- card header with list of tabs -->
+                    <div class="card-header card-header-rpg">
+                        <ul class="nav nav-tabs card-header-tabs" id="call-of-cthulhu-list" role="tablist">
+                            <!-- default active tab -->
+                            <li class="nav-item rpg-nav-item-active">
+                                <a href="#what" class="nav-link active rpg-nav-link" role="tab" aria-controls="what"
+                                    aria-selected="true">What is it?</a>
+                            </li>
+                            <!-- other (passive tabs) -->
+                            <li class="nav-item">
+                                <a href="#dungeons" class="nav-link rpg-nav-link" role="tab" aria-controls="dungeons"
+                                    aria-selected="false">So is it D&D?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#media" class="nav-link rpg-nav-link" role="tab" aria-controls="media"
+                                    aria-selected="false">Media</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#links" class="nav-link rpg-nav-link" role="tab" aria-controls="links"
+                                    aria-selected="false">Links</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- card body with panes -->
+                    <div class="card-body card-body-rpg">
+                        <div class="tab-content rpg-tab-content">
+                            <!-- all the panes that are shown after clicking the buttons with the same ID -->
+                            <div class="tab-pane active" id="what" role="tabpanel">
+                                <div class="card-title">
+                                    <h4 class="card-title rpg-title">Well... <span class="no-wrap-text">It's a Tabletop
+                                            RPG</span></h4>
+                                </div>
+                                <p class="card-text text-justify">Call of Cthulhu is <a href="https://www.chaosium.com/"
+                                        class="card-link">Chaosium Inc</a>.’s roleplaying game of mystery and horror
+                                    inspired by the fiction of H. P. Lovecraft, the originator of cosmic horror. In this
+                                    game, ordinary people are confronted with the machinations of the Cthulhu Mythos.
+                                    Set in the 1920s, the modern-day, or beyond, players portray investigators of the
+                                    unknown—decent folk taking a stand against the terrors of the night despite the
+                                    costs to their sanity and their lives. Only they can save humanity and the world
+                                    from unthinkable horror.</p>
+                                <img class="card-image rpg-image"
+                                    src="https://www.chaosium.com/content/ExternalImages/banners/cat-coc.png"
+                                    alt="Terrified woman in the foreground, in the background a house. There are tentacles reaching out of the windows">
+                                <h6 class="rpg-title card-subtitle slim-title">Scared yet? Wait till you hear who you're
+                                    going to play...</h6>
+                                <p class="card-text text-justify">Surely some great hero with supernatural powers,
+                                    right? I'm afraid not, old chap. According to <a href="https://www.chaosium.com/"
+                                        class="card-link">Chaosium:</a> "Call of Cthulhu investigators come from all
+                                    walks of life, be they journalists, librarians, or school teachers, or even private
+                                    eyes, taxi drivers, or a hobo. They face mysteries that cannot be explained by
+                                    rational means. Mysteries riddled with ancient and forgotten lore that humanity was
+                                    not meant to know."</p>
+                                <div class="source"><a href="https://www.chaosium.com/" class="card-link"
+                                        target="blank"><i>Source – Chaosium</i></a></div>
+                            </div>
+
+                            <div class="tab-pane" id="dungeons" role="tabpanel" aria-labelledby="dungeons-tab">
+                                <div class="card-title">
+                                    <h4 class="card-title rpg-title">Kind of... <span class="no-wrap-text">But not
+                                            really</span></h4>
+                                </div>
+                                <p class="card-text text-justify">So if you are still reading this, i will suppose you
+                                    have already heard about <a href="https://dnd.wizards.com/"
+                                        class="card-link"><i>Dungeons & Dragons.</i></a> If not the mother, surely at
+                                    least the annoyingly perfect big brother of all Role Playing Games. Bunch of cool
+                                    people sitting in a room or infront of their webcams, pretending that they are
+                                    heroic (or not so heroic) characters in a beautiful fantasy world. One of them, the
+                                    Game Master, is building up the world and leading them through daring (or not so
+                                    daring) adventures. What happens is completely up to the players and GM, there is a
+                                    set of rules telling you how to handle certain situations and how to develop your
+                                    characters as they gain experience and new levels. And there is A LOT of dice. But
+                                    there is plenty of places to read about D&D so let's focus on Call of Cthulhu again
+                                    and what are the differences between the two.</p>
+                                <img class="card-image rpg-image" src="../Images/rpg_dice.jpeg"
+                                    alt="Tabletop with a bag of dice and some game papers, probably a character sheet">
+                                <h6 class="rpg-title card-subtitle slim-title">Game System</h6>
+                                <p class="card-text text-justify">Unlike D&D, Call of Cthulhu doesn't work with levels
+                                    or even experience. You can't choose what to improve and what new skills you get at
+                                    the new level, instead you put a tick at every skill that you have succesfully used
+                                    in a scenario. At the end you make improvement check to see if and how much has the
+                                    particular skill increased. Skill checks are based on percentile roll, where you
+                                    have to roll less, than your skill value. Additionally, if your roll was really
+                                    good, you can get hard or extreme success. You can also be told by the Lore Keeper
+                                    (that's how GM is called in CoC), that to succeed in a particular situation, you
+                                    need to pass a hard check. Also, there is one special treat in form of Sanity.
+                                    Sometimes your characters have to pass a Sanity check, to see how their minds
+                                    handled particularly creepy situation or something they have glimpsed in the
+                                    shadows. When they fail, or even when they succeed, depending on the situation, they
+                                    loose part of their sanity. If that happens too often, the character might get into
+                                    a bout of madness, temporarily succumbing to various mental conditions, such as
+                                    amnesia, fear, paralysis and many other and even funnier ones. Eventually you can
+                                    become temporary insane, getting phobias and so on. If you run out of Sanity, your
+                                    character becomes permanently insane and is not anymore a player charater. So
+                                    basically there are two ways to die in CoC. For more details check the Sanity rules
+                                    and tables on <a
+                                        href="https://cthulhuwiki.chaosium.com/rules/sanity.html#bouts-of-madness-table"
+                                        class="card-link"><i>Cthulhuwiki.</i></a></p>
+
+                                <img class="card-image rpg-image floating-image"
+                                    src="../Images/Eloso - Call of Cthulhu themed illustration - Village, Mike Szabados.jpg"
+                                    alt="Male and female detectives following a trail in a snow in the night in what appeares to be a small village street.">
+                                <h6 class="rpg-title card-subtitle slim-title">Setting</h6>
+                                <p class="card-text text-justify">But let's not dwell on rules
+                                    too much. CoC is a very story driven game. You won't spend as much time on a battle map, as you might in D&D, though that of course varies with every GM and group of players, so take this with a grain of salt. The setting is therefore what really makes the game. In the original
+                                    version, your adventures take place in 1920s, with all that comes with it, the
+                                    booming
+                                    science, that has to figure out much yet, old cars, smoke filled PI offices, hats
+                                    and
+                                    prohibition. On this background plays out a game of occult, cosmic entities
+                                    interfering
+                                    with human affairs and madness threatening to take over your mind on every corner,
+                                    while
+                                    facing things, that ought not to be. As merely human investigator, you can very fast
+                                    come to be the hunted, instead of the prey. It is a game of mystery and survival, in
+                                    <a href="https://en.wikipedia.org/wiki/Lovecraft_Country"
+                                        class="card-link"><i>Lovecraft Country</i></a> you can barely trust anyone.</p>
+                                <div class="source"><a href="https://www.chaosium.com/" class="card-link"
+                                        target="blank"><i>Source – Author, Chaosium, Wikipedia</i></a></div>
+                            </div>
+
+                            <div class="tab-pane" id="media" role="tabpanel" aria-labelledby="media-tab">
+                                <div class="card-title rpg-title">
+                                    <h4 class="card-title-main">Couple of things to waste some time with</h4>
+                                    <h6 class="card-subtitle">Sounds interesting so far? What about watching bunch of
+                                        crazy folks in costumes actually playing the game?</h6>
+                                </div>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe id="iframe-arkham-graveyards" width="560" height="315"
+                                        src="https://www.youtube.com/embed/DZinEWCNUr8?si=25MAUwarX8P_bCG5"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <h6 class="card-title rpg-title card-subtitle">
+                                    Fancy filling out a Character Sheet and creating your own investigator? <span
+                                        class="no-wrap-text">Give it a go!</span></h6>
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe id="iframe-character-sheet"
+                                        src="https://www.chaosium.com/content/FreePDFs/CoC/Character%20Sheets/V2/CoC7%20PC%20Sheet%20-%20Auto-Fill%20-%201920s%20-%20Standard%20-%20Color.pdf"
+                                        frameborder="0"></iframe>
+                                </div>
+                                <a class="card-link boardgame-link iframe-link"
+                                    href="https://www.chaosium.com/cthulhu-character-sheets/?srsltid=AfmBOoq24C1fm0DcA06udneeZ_83e-KzNEwu8bDWLpfOjLhmlTejR9R2" target="_blank">
+                                    Check or download Chaosium's Character Sheets for all variants of the
+                                    game</a>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 rpg-lower-columns">
+                                        <h6 class="card-title rpg-title card-subtitle">
+                                            40th Anniversary Starter Set by <span class="no-wrap-text"><a
+                                                    href="https://www.chaosium.com"
+                                                    class="card-link boardgame-link" target="_blank">Chaosium</a></span></h6>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="iframe-smaller" width="560" height="315"
+                                                src="https://www.youtube.com/embed/Q2ltI2VJ2gQ?si=yo6IFuwtdUsrfPGa"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <h6 class="card-title rpg-title card-subtitle">Long Campaign by
+                                            <span class="no-wrap-text"><a href="https://www.twistedgearsstudios.com"
+                                                    class="card-link boardgame-link" target="_blank">Twisted Gear Studios</a></span>
+                                        </h6>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="iframe-smaller" width="560" height="315"
+                                                src="https://www.youtube.com/embed/zij1FMeO8hQ?si=PeCpDth36Ew6hTwH"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 rpg-lower-columns">
+                                        <h6 class="card-title rpg-title card-subtitle">
+                                            Some more gameplay by <span class="no-wrap-text"><a
+                                                    href="https://www.youtube.com/@Mystery_Quest"
+                                                    class="card-link boardgame-link" target="_blank">Mystery Quest</a></span></h6>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="iframe-smaller" width="560" height="315"
+                                                src="https://www.youtube.com/embed/4xPtIo1nhOA?si=c0gk2_2XIct8YkW0"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                        <h6 class="card-title rpg-title card-subtitle">
+                                            CoC in 1973 by <span class="no-wrap-text"><a href="https://www.twistedgearsstudios.com"
+                                                class="card-link boardgame-link" target="_blank">Twisted Gear Studios</a></span></h6>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qdSF0zKfBpM?si=DMz2K4t3dAeaxhdi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="links" role="tabpanel" aria-labelledby="links-tab">
+                                <div class="card-title">
+                                    <h4 class="card-title rpg-title">Some interesting sites to check</h4>
+                                </div>
+                                <h6 class="rpg-title card-subtitle slim-title"><a href="https://www.chaosium.com/"
+                                    target="_blank" class="card-link subtitle-link">Chaosium webpage</a></h6>
+                                <p class="card-text">Webpage of the CoC's publisher. You can find a lot of information about the game there, as well as usefull tools to help you play. And a message from Captain Obvious - you can buy it there.</p>
+                                <h6 class="rpg-title card-subtitle slim-title"><a href="https://roll20.net/"
+                                    target="_blank" class="card-link subtitle-link">Roll20</a></h6>
+                                <p class="card-text">Online platform where you can find tools, players, maps, dice... you name it. You can use it to play online with your group. It has D&D, Pathfinder, CoC, Alien RPG and moooore.</p>
+                                <h6 class="rpg-title card-subtitle slim-title"><a href="https://cthulhuwiki.chaosium.com/"
+                                    target="_blank" class="card-link subtitle-link">The Call of Cthulhu RPG Wiki</a></h6>
+                                <p class="card-text">Chaosium's wikipedia for CoC. Learn about the game system, Cthulhu Mythos, character creation and equipment or the monsters, that you can encounter on your way to madness.</p>
+                                <h6 class="rpg-title card-subtitle slim-title"><a href="https://en.wikipedia.org/wiki/Call_of_Cthulhu_(role-playing_game)"
+                                    target="_blank" class="card-link subtitle-link">Call of Cthulhu RPG on THE Wikipedia</a></h6>
+                                <p class="card-text">The Allmighty Wikipedia right? You can find there anything. And sometimes even what you're looking for.</p>
+                                <h6 class="rpg-title card-subtitle slim-title"><a href="https://www.twistedgearsstudios.com/"
+                                    target="_blank" class="card-link subtitle-link">Twisted Gears Studio</a></h6>
+                                <p class="card-text">Awesome group of people, making game podcasts of Call of Cthulhu, Starfinder and Delta Green. Loads of fun to be found there.</p>
+                                <h6 class="rpg-title card-subtitle slim-title"><a href="https://www.youtube.com/watch?v=DZinEWCNUr8&t=8s"
+                                    target="_blank" class="card-link subtitle-link">Graveyards of Arkham</a></h6>
+                                <p class="card-text">Video series of Chaosium's own actual play podcast, also available as audio on any decent podcast service.</p>
+                                <h6 class="rpg-title card-subtitle slim-title"><a href="https://basicroleplaying.org/topic/9475-a-guide-to-the-different-cthulhu-systems/"
+                                    target="_blank" class="card-link subtitle-link">Guide to CoC Variants</a></h6>
+                                <p class="card-text">There are multiple variants of Call of Cthulhu system, in case you're no fan of '20s. Here is Joe Kenobi's summary.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- script to switch the panes by clicking on a tab -->
+    <!-- taken from:
+    link - https://codepen.io/cristinaconacel/pen/ePVMME
+    by cristina(https://codepen.io/cristinaconacel) -->
+    <script>
+        $('#call-of-cthulhu-list a').on('click', function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+
+    <div class="progress fixed-bottom">
+        <div class="progress-bar" style="width:0%"></div>
+    </div>
+</body>
+
+</html>

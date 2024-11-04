@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://bibliography.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://bibliography.xsd"
+    xmlns:mstns="http://bibliography.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+<xs:element name="bibliography">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="book" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="title" type="xs:string"/>
+						<xs:element name="written">
+							<xs:simpleType>
+								<xs:restriction base="xs:int">
+									<xs:minInclusive value="1890"/>
+									<xs:maxInclusive value="1937"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="form">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Short story"/>
+									<xs:enumeration value="Flash fiction"/>
+									<xs:enumeration value="Novel fragment"/>
+									<xs:enumeration value="Novella"/>
+									<xs:enumeration value="Novel"/>
+									<xs:enumeration value="Short story fragment"/>
+									<xs:enumeration value="Letter excerpt"/>
+									<xs:enumeration value="Brief pseudohistory"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="wiki" type="xs:string"/>
+						<xs:element name="text" type="xs:string"/>
+						<xs:element name="read" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>

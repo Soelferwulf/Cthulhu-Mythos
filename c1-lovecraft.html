@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H. P. Lovecraft - The Author</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="lovecraft">
+    <noscript>
+        <h1 style="color: red";>JavaScript is deactivated!</h1>
+    </noscript>
+
+    <nav class="navbar navbar-expand-sm justify-content-between fixed-top" id="uncollapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Little Cthulhu" style="width:2rem;"></a>
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item dropdown">
+                <a href="./b1-the_world.html" class="nav-link dropdown-toggle" id="mythos-main"
+                    onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                <div class="dropdown-menu">
+                    <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                    <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board Games</a>
+                    <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                        Games</a>
+                    <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call of
+                        Cthulhu RPG</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="./c1-lovecraft.html" class="nav-link dropdown-toggle" id="lovecraft-main"
+                    onclick="fxSanityCounter()">H. P.
+                    LOVECRAFT</a>
+                <div class="dropdown-menu">
+                    <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                    <a href="./c2-bibliography.html" class="dropdown-item" onclick="fxSanityCounter()">Bibliography</a>
+                    <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                    <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                        Lovecraft<br>Historical Society</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="./d-contact.html" class="nav-link" id="contact" onclick="fxSanityCounter()">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-md justify-content-between fixed-top" id="collapsed">
+        <a href="./index.html" class="navbar-brand" onclick="fxSanityCounter()"><img class="navbar-logo"
+                src="../Images/Cthulhu Icon - Wirestock.png" alt="Icon - Funny Cthulhu" style="width:2rem;"></a>
+            <!-- hamburger menu -->
+                <button class="navbar-toggler" id="burger-button" type="button" data-toggle="collapse" data-target="#burger">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="burger">
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item collapsed-dropdown">
+                <a class="nav-link dropdown-toggle" id="mythos-main-collapse" data-toggle="dropdown" onclick="fxSanityCounter()">CTHULHU MYTHOS</a>
+                <div class="dropdown-menu">
+                    <a href="./b1-the_world.html" class="dropdown-item" onclick="fxSanityCounter()">The World</a>
+                    <a href="./b2-board_games.html" class="dropdown-item" onclick="fxSanityCounter()">Board Games</a>
+                    <a href="./b3-computer_games.html" class="dropdown-item" onclick="fxSanityCounter()">Computer
+                        Games</a>
+                    <a href="./b4-call_of_cthulhu_rpg.html" class="dropdown-item" onclick="fxSanityCounter()">Call of
+                        Cthulhu RPG</a>
+                </div>
+            </li>
+            <li class="nav-item collapsed-dropdown">
+                <a class="nav-link dropdown-toggle" id="lovecraft-main-collapse" data-toggle="dropdown" onclick="fxSanityCounter()">H. P. LOVECRAFT</a>
+                <div class="dropdown-menu">
+                    <a href="./c1-lovecraft.html" class="dropdown-item" onclick="fxSanityCounter()">The Author</a>
+                    <a href="./c2-bibliography.html" class="dropdown-item" onclick="fxSanityCounter()">Bibliography</a>
+                    <a href="./c3-reader.html" class="dropdown-item" onclick="fxSanityCounter()">Fulltext reader</a>
+                    <a href="https://www.hplhs.org/" class="dropdown-item" onclick="fxSanityCounter()">H. P.
+                        Lovecraft<br>Historical Society</a>
+                </div>
+            </li>
+            <li class="nav-item collapsed-dropdown">
+                <a href="./d-contact.html" class="nav-link" id="contact-collapse" onclick="fxSanityCounter()">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <img class="card-img-top rounded" src="https://upload.wikimedia.org/wikipedia/commons/1/10/H._P._Lovecraft%2C_June_1934.jpg" alt="portrait of H. P. Lovecraft">
+                        <h4 class="card-title">H. P. <span class="no-wrap-text">Lovecraft</span></h4>
+                        <p class="card-text">Short story writer, editor, novelist, poet</p>
+                        <p class="card-text">Born: <span class="no-wrap-text">20.08.1890</span></p>
+                        <p class="card-text">In: <span class="no-wrap-text">Providence,</span> Rhode Island, U.S.</p>
+                        <p class="card-text">Died: <span class="no-wrap-text">15.03.1937</span></p>
+                        <p class="card-text"><a href="https://en.wikipedia.org/wiki/H._P._Lovecraft" class="card-link" id="card-link" target="blank">Lovecraft on wiki</a></p>
+                        <p class="card-text"><a href="../Source/c2-bibliography.html" class="card-link" id="bibliography-link"><span class="no-wrap-text">Bibliography</span></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3 class="container-title">H. P. Lovecraft - The Father of Horror</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">The price of inspiration</h5>
+                        <p class="card-text text-justify">Howard Phillips Lovecraft has had a troubled childhood. After loosing his father to a mental illness, he became fixated on his grandfather, who has introduced him to the world of literature. Not only to classics, but to original weird tales of "winged horrors" and "deep, low, moaning sounds" which he created for Howard's entertainment. When he was five years old, his grandmother passed away and his family fell, according to him, "in a gloom from which it never fully recovered". He was terrified of black mourning dresses, that his mother and aunts wore, and around that time, he started to suffer from nigtmares, that have later become inspiration for his fiction. At the age of seven, Lovecraft started to write his own poems, restyling Greco-Roman mythological stories. Another early inspiration was his love for astronomy. Throughout his school years, Lovecraft suffered from intense headaches and breakdowns, which has at the end prevented him from graduating and attending university.</p>
+                        <div class="source"><a href="https://en.wikipedia.org/wiki/H._P._Lovecraft" class="card-link" target="blank"><i>H. P. Lovecraft – Wikipedia</i></a></div>
+                        <h5 class="card-title">What came out of it?</h5>
+                        <p class="card-text text-justify">Lovecraft popularised the term <i><a class="card-link" href="https://en.wikipedia.org/wiki/Weird_fiction" target= "_blank">weird fiction</a></i> in his essays. Influenced by his love of science, space and <i><a href="" class="card-link" target="_blank">Edgar Allan Poe</a></i>, who was one of the pioneers of weird writing, and fueled by his fears and nightmares, Lovecraft has developed an exceptionaly powerful and dark imagination.</p>
+                        <blockquote>"The oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown."<br><div style="text-align:right">H.P. Lovecraft</div></blockquote>
+                        <p class="card-text text-justify">The central theme of Lovecraft's literature is <i><a href="https://en.wikipedia.org/wiki/Cosmicism" class="card-link">Cosmicism</a></i>, or cosmic indifference. Humanity is insignificant in the scope of the universe, external forces coming from space are not malevolent, rather indifferent toward humanity. His universe is meaningless and mechanical, human beings can never fully understand it.</p>
+                        <p class="card-text text-justify">His protagonists often come to a point, where they have their own insignificance confirmed through an event or too much of dangerous self-knowledge, which they seek. This sometimes leads them to madness and even self-destruction. Additionaly, decline of western civilization and decadence are strongly present in his writing.</p>
+                        <blockquote>"Searchers after horror haunt strange, far places. For them are the catacombs of Ptolemais, and the carven mausolea of the nightmare countries. They climb to the moonlit towers of ruined Rhine castles, and falter down black cobwebbed steps beneath the scattered stones of forgotten cities in Asia. The haunted wood and the desolate mountain are their shrines, and they linger around the sinister monoliths on uninhabited islands. "<br><div style="text-align:right">H.P. Lovecraft, The Picture in the House</div></blockquote>
+                        <p class="card-text text-justify">More on topics of Lovecraftian World in the section <a href="./b1-the_world.html" class="card-link"><strong>Cthulhu Mythos.</strong></a></p>
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="progress fixed-bottom">
+        <div class="progress-bar" style="width:0%"></div>
+    </div>
+</body>
+
+</html>
