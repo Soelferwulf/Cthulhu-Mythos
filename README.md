@@ -4,4 +4,4 @@ ________
 
 It was created as a semester project for my WebDesign course at BBRZ (BITEC)
 
-# It is very much a work in progress, though I am open to any suggestions and ideas.
+# I'm migrating the project from another place so it won't work yet.
